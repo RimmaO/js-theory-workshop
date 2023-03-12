@@ -134,7 +134,19 @@
 
 // Example 10 - Дедлайн здачі проекту (switch)
 // Виконай рефакторинг коду задачі номер 5 використовуючи switch.
+// Задача 5 рефакторинг
+// let link = "https://my-site.com/about/;ljhm/bnbmbk/";
+// let userLink;
+// switch (link) {
+//   case link.endsWith("/"):
+//     userLink = link;
+//     break;
 
+//   default:
+//     userLink = link + "/";
+// }
+// console.log(userLink);
+// Задача 9 рефакторинг
 // const daysUntilDeadline = 2;
 // let deadline;
 // switch (daysUntilDeadline) {
@@ -158,8 +170,7 @@
 // const min = 20;
 
 // for (let i = min; i <= max; i += 1) {
-//   if (i % 5 === 0);
-//   {
+//   if (i % 5 === 0) {
 //     console.log(i);
 //   }
 // }
@@ -179,13 +190,13 @@ let userPassword;
 //   userPassword = prompt("Ввести пароль");
 //   console.log(userPassword);
 // } while (userPassword !== password);
-let text;
-let userInput;
-if (text === "Адмін") {
-  userInput = prompt("Ввести пароль");
-} else if ((text = "" || null)) {
-  userInput = prompt("Скасовано");
-} else {
-  userInput = prompt("Я вас не знаю");
-}
-console.log(userInput);
+// let text;
+// let userInput;
+// if (text === "Адмін") {
+//   userInput = prompt("Ввести пароль");
+// } else if ((text = "" || null)) {
+//   userInput = prompt("Скасовано");
+// } else {
+//   userInput = prompt("Я вас не знаю");
+// }
+// console.log(userInput);
