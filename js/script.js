@@ -41,7 +41,7 @@
 //   alert("Це не число");
 // }
 
-// console.log(typeof userInput);
+// console.log(userInput);
 // +userInput=Number(userInput)
 
 // Example 4 - Вкладені розгалуження
@@ -150,17 +150,18 @@
 // Example 10 - Дедлайн здачі проекту (switch)
 // Виконай рефакторинг коду задачі номер 5 використовуючи switch.
 // задача 5 рефакторинг
-// let link = "https://my-site.com/about./";
+// let link = "https://my-site.com/about";
 // let userLink;
 // switch (link) {
 //   case link.endsWith("/"):
-//     userLink = link;
+//     console.log(userLink) = link;
 //     break;
-
+//   case link.endsWith(""):
+//     console.log(userLink) = link + "/";
+//     break;
 //   default:
-//     userLink = link + "/";
+//     console.log(userLink);
 // }
-// console.log(userLink);
 
 // задача 9 рефакторинг
 // const daysUntilDeadline = 2;
