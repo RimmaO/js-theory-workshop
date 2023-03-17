@@ -147,6 +147,7 @@ if (daysUntilDeadline === 0) {
 
 console.log(deadline);
 
+<<<<<<< Updated upstream
 Example 10 - Дедлайн здачі проекту (switch)
 Виконай рефакторинг коду задачі номер 5 використовуючи switch.
 задача 5 рефакторинг
@@ -162,6 +163,23 @@ switch (link) {
   default:
     console.log(userLink);
 }
+=======
+// Example 10 - Дедлайн здачі проекту (switch)
+// Виконай рефакторинг коду задачі номер 5 використовуючи switch.
+// задача 5 рефакторинг
+
+// let link = "https://my-site.com/about";
+// let userLink;
+// switch ("/") {
+//   case link[link.length - 1]:
+//     userLink = link;
+//     break;
+//   default:
+//     userLink = link + "/";
+//     break;
+// }
+// console.log(userLink);
+>>>>>>> Stashed changes
 
 задача 9 рефакторинг
 const daysUntilDeadline = 2;
@@ -208,6 +226,7 @@ do {
   console.log(userPassword);
 } while (userPassword !== password);
 
+<<<<<<< Updated upstream
 let text;
 let userInput;
 
@@ -227,3 +246,23 @@ if (text === "Адмін") {
 }
 
 console.log(userInput);
+=======
+// const password = "Я адмін";
+// const log = "Адмін";
+
+// const userInput = prompt("Ввести логін");
+// if (userInput === log) {
+//   const userLog = prompt("Ввести пароль");
+//   if (userLog === password) {
+//     alert("Здрастуйте!");
+//   } else if (userLog === "" || userLog === null) {
+//     alert("Скасовано");
+//   } else {
+//     alert("Невірний пароль");
+//   }
+// } else {
+//   alert("Я вас не знаю");
+// }
+// console.log(userInput);
+
+>>>>>>> Stashed changes
