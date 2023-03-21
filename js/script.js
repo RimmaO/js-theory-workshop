@@ -119,7 +119,7 @@
 //     return result.toFixed(1);
 // }
 
-// Напиши функцію min(a,b), яка повертає найменше з чисел a та b.
+// Example 2 - Напиши функцію min(a,b), яка повертає найменше з чисел a та b.
 
 // console.log(min(2, 5)); // 2
 // console.log(min(3, -1)); // -1
@@ -163,29 +163,57 @@
 
 // Example 5 - Логування контактів
 // Напиши функцію printContactsInfo(names, phones) яка виводить у консоль ім'я та телефонний номер користувача. У параметри names та phones будуть передані рядки імен та телефонних номерів, розділені комами. Порядковий номер імен та телефонів у рядках вказують на відповідність. Кількість імен та телефонів гарантовано однакова.
-//
-// function printContactsInfo(names, phones) {}
-//
-// printContactsInfo(
-//   'Jacob,William,Solomon,Artemis',
-//   '89001234567,89001112233,890055566377,890055566300',
+
+// function printContactsInfo(names, phones) {
+//   const namesArray = names.split(",");
+//   const phonesArray = phones.split(",");
+//   let i = [];
+
+//   for (let i = 0; i < namesArray.length; i++) {
+//     console.log(namesArray[i], phonesArray[i]);
+//   }
+//   return [namesArray[i], phonesArray[i]];
+// }
+// console.log(
+//   printContactsInfo(
+//     "Jacob,William,Solomon,Artemis",
+//     "89001234567,89001112233,890055566377,890055566300"
+//   )
 // );
 
 // Example 6 - Пошук найбільшого елемента
 // Напиши функцію findLargestNumber(numbers)яка шукає найбільше число в масиві.
 //
-// function findLargestNumber(numbers) {}
-//
+// function findLargestNumber(numbers) {
+//   let max = numbers[0];
+
+//   for (const number of numbers) {
+//     if (max < number) {
+//       max = number;
+//     }
+//   }
+
+//   return max;
+// }
+
 // console.log(findLargestNumber([2, 17, 94, 1, 23, 37])); // 94
 // console.log(findLargestNumber([49, 4, 7, 83, 12])); // 83
+
 // Example 7 - Середнє значення
 // Напишіть функцію calAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення. Усі аргументи будуть лише числами.
 //
-// function calAverage() {}
-//
+// function calAverage() {
+//   let total = 0;
+//   for (const argument of arguments) {
+//     total += argument / arguments.length;
+//   }
+//   return total;
+// }
+
 // console.log(calAverage(1, 2, 3, 4)); // 2.5
 // console.log(calAverage(14, 8, 2)); // 8
 // console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
+
 // Example 8 - Форматування часу
 // Напиши функцію formatTime(minutes) яка переведе значення minutes (кількість хвилин) у рядок у форматі годин та хвилин HH:MM.
 //
@@ -193,7 +221,7 @@
 // const minutes = totalMinutes % 60;
 // console.log(hours);
 // console.log(minutes);
-//
+
 // const doubleDigitHours = String(hours).padStart(2, 0);
 // const doubleDigitMinutes = String(minutes).padStart(2, 0);
 // console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
@@ -203,6 +231,7 @@
 // console.log(formatTime(70)); // "01:10"
 // console.log(formatTime(450)); // "07:30"
 // console.log(formatTime(1441)); // "24:01"
+
 // Example 9 - Колекція курсів (includes, indexOf, push і т. д.)
 // Напишіть функції для роботи з колекцією навчальних курсів courses:
 //
@@ -221,6 +250,7 @@
 //
 // updateCourse('Express', 'NestJS');
 // console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
 
 // паттерн раннє повернення
 // function coffeeMachine (coffeeNumber) {
