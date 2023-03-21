@@ -164,22 +164,22 @@
 // Example 5 - Логування контактів
 // Напиши функцію printContactsInfo(names, phones) яка виводить у консоль ім'я та телефонний номер користувача. У параметри names та phones будуть передані рядки імен та телефонних номерів, розділені комами. Порядковий номер імен та телефонів у рядках вказують на відповідність. Кількість імен та телефонів гарантовано однакова.
 
-// function printContactsInfo(names, phones) {
-//   const namesArray = names.split(",");
-//   const phonesArray = phones.split(",");
-//   let i = [];
+function printContactsInfo(names, phones) {
+  const namesArray = names.split(",");
+  const phonesArray = phones.split(",");
+  let array = [];
 
-//   for (let i = 0; i < namesArray.length; i++) {
-//     console.log(namesArray[i], phonesArray[i]);
-//   }
-//   return [namesArray[i], phonesArray[i]];
-// }
-// console.log(
-//   printContactsInfo(
-//     "Jacob,William,Solomon,Artemis",
-//     "89001234567,89001112233,890055566377,890055566300"
-//   )
-// );
+  for (let i = 0; i < namesArray.length; i++) {
+    array.push(`${namesArray[i]} - ${phonesArray[i]}`);
+  }
+  return array;
+}
+console.log(
+  printContactsInfo(
+    "Jacob,William,Solomon,Artemis",
+    "89001234567,89001112233,890055566377,890055566300"
+  )
+);
 
 // Example 6 - Пошук найбільшого елемента
 // Напиши функцію findLargestNumber(numbers)яка шукає найбільше число в масиві.
