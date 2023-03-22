@@ -83,8 +83,17 @@
 // Example 7 - Сортування масиву із циклом
 // Напиши скрипт сортування масиву рядків в алфавітному порядку за першою літерою елемента.
 //
-// const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
-
+const langs = ["python", "javascript", "c++", "haskel", "php", "ruby"];
+function arraySort(array) {
+  const sortArray = [];
+  for (let i = 0; i < 65534; i++)
+    for (const word of array) {
+      if (i === charCodeAt(0)) {
+        sortArray.push(word);
+      }
+    }
+  return sortArray;
+}
 // Example 8 - Пошук елемента
 // Напиши скрипт пошуку найменшого числа у масиві. Код повинен працювати для будь-якого масиву чисел. Використовуй цикл для розв'язання задачі.
 //
