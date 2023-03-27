@@ -82,18 +82,24 @@
 
 // Example 7 - Сортування масиву із циклом
 // Напиши скрипт сортування масиву рядків в алфавітному порядку за першою літерою елемента.
-//
-const langs = ["python", "javascript", "c++", "haskel", "php", "ruby"];
-function arraySort(array) {
-  const sortArray = [];
-  for (let i = 0; i < 65534; i++)
-    for (const word of array) {
-      if (i === charCodeAt(0)) {
-        sortArray.push(word);
-      }
-    }
-  return sortArray;
-}
+// доробити
+// const langs = ["python", "javascript", "c++", "haskel", "php", "ruby"];
+
+// function arraySort(array) {
+//   const sortArray = [...array];
+//   for (let i = 0; i < sortArray.length - 1; i++) {
+//     for (let j = i + 1; j < sortArray.length - 1; j++) {
+//       const item1 = sortArray[i];
+//       const item2 = sortArray[j];
+//       if (item2[0] < item1[0]) {
+//         sortArray[j] = item1;
+//         sortArray[i] = item2;
+//       }
+//     }
+//   }
+//   return sortArray;
+// }
+// console.log(arraySort(langs));
 // Example 8 - Пошук елемента
 // Напиши скрипт пошуку найменшого числа у масиві. Код повинен працювати для будь-якого масиву чисел. Використовуй цикл для розв'язання задачі.
 //
@@ -173,22 +179,22 @@ function arraySort(array) {
 // Example 5 - Логування контактів
 // Напиши функцію printContactsInfo(names, phones) яка виводить у консоль ім'я та телефонний номер користувача. У параметри names та phones будуть передані рядки імен та телефонних номерів, розділені комами. Порядковий номер імен та телефонів у рядках вказують на відповідність. Кількість імен та телефонів гарантовано однакова.
 
-function printContactsInfo(names, phones) {
-  const namesArray = names.split(",");
-  const phonesArray = phones.split(",");
-  let array = [];
+// function printContactsInfo(names, phones) {
+//   const namesArray = names.split(",");
+//   const phonesArray = phones.split(",");
+//   let array = [];
 
-  for (let i = 0; i < namesArray.length; i++) {
-    array.push(`${namesArray[i]} - ${phonesArray[i]}`);
-  }
-  return array;
-}
-console.log(
-  printContactsInfo(
-    "Jacob,William,Solomon,Artemis",
-    "89001234567,89001112233,890055566377,890055566300"
-  )
-);
+//   for (let i = 0; i < namesArray.length; i++) {
+//     array.push(`${namesArray[i]} - ${phonesArray[i]}`);
+//   }
+//   return array;
+// }
+// console.log(
+//   printContactsInfo(
+//     "Jacob,William,Solomon,Artemis",
+//     "89001234567,89001112233,890055566377,890055566300"
+//   )
+// );
 
 // Example 6 - Пошук найбільшого елемента
 // Напиши функцію findLargestNumber(numbers)яка шукає найбільше число в масиві.
@@ -225,42 +231,73 @@ console.log(
 
 // Example 8 - Форматування часу
 // Напиши функцію formatTime(minutes) яка переведе значення minutes (кількість хвилин) у рядок у форматі годин та хвилин HH:MM.
-//
+
 // const hours = Math.floor(totalMinutes / 60);
 // const minutes = totalMinutes % 60;
-// console.log(hours);
-// console.log(minutes);
 
 // const doubleDigitHours = String(hours).padStart(2, 0);
 // const doubleDigitMinutes = String(minutes).padStart(2, 0);
-// console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
-//
-// function formatTime(minutes) {}
-//
+
+// function formatTime(minutesTotal) {
+//   const hours = Math.floor(minutesTotal / 60);
+//   const minutes = minutesTotal % 60;
+//   const doubleDigitHours = String(hours).padStart(2, 0);
+//   const doubleDigitMinutes = String(minutes).padStart(2, 0);
+//   return `${doubleDigitHours}:${doubleDigitMinutes}`;
+// }
+
 // console.log(formatTime(70)); // "01:10"
 // console.log(formatTime(450)); // "07:30"
 // console.log(formatTime(1441)); // "24:01"
 
 // Example 9 - Колекція курсів (includes, indexOf, push і т. д.)
 // Напишіть функції для роботи з колекцією навчальних курсів courses:
-//
+
 // addCourse(name) - додає курс до кінця колекції
 // removeCourse(name) - видаляє курс із колекції
 // updateCourse(oldName, newName) - змінює ім'я на нове
-// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
-//
-// addCourse('Express');
-// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
-// addCourse('CSS'); // 'Ви вже маєте такий курс'
-//
-// removeCourse('React');
-// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
-// removeCourse('Vue'); // 'Курс із таким ім'ям не знайдено'
-//
-// updateCourse('Express', 'NestJS');
-// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+
 // const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
 
+// function addCourse(name) {
+//   for (const course of courses) {
+//     if (course === name) {
+//       return "Ви вже маєте такий курс";
+//     }
+//   }
+//   courses.push(name);
+//   return courses;
+// }
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL']
+// console.log(addCourse("CSS")); // 'Ви вже маєте такий курс'
+// console.log(addCourse("Express")); //  ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+// function removeCourse(name) {
+//   for (let i = 0; i <= courses.length; i++) {
+//     const nameIndex = courses[i];
+//     if (name === nameIndex) {
+//       courses.splice(i, 1);
+//       return courses;
+//     }
+//   }
+//   return "Курс із таким ім'ям не знайдено";
+// }
+
+// console.log(removeCourse("React")); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// console.log(removeCourse("Vue")); // 'Курс із таким ім'ям не знайдено'
+
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL", "Express"];
+
+// function updateCourse(oldName, newName) {
+//   const nameIndex = courses.indexOf(oldName);
+//   courses.splice(nameIndex, 1, newName);
+//   return courses;
+// }
+// console.log(updateCourse("Express", "NestJS")); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+
+//==========================questions==============================
 // паттерн раннє повернення
 // function coffeeMachine (coffeeNumber) {
 //     switch (coffeeNumber) {
@@ -293,7 +330,7 @@ console.log(
 //     return largestWord;
 // }
 
-// const string = 'JS is awesome! s ss'
+// const string = 'JS is awesome! '
 // console.log(findLongestWord(string))
 // function findLongestWord(string) {
 //     const wordsArray = string.split(" ");
